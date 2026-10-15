@@ -78,3 +78,40 @@ Completed:
 - Shared printer: Complete
 - Connectivity testing: Complete
 - Switch verification: Complete
+
+---
+
+## Final Project Phase – Leano Travel Agency Network
+
+The final phase records the completed network implementation, technical report, and evidence collected during testing.
+
+### Final Network Design
+
+The network uses five VLANs and Router-on-a-Stick routing over the allocated `192.168.32.0/24` address block.
+
+| VLAN | Department | Network | Gateway |
+|---:|---|---|---|
+| 10 | Administration | `192.168.32.0/28` | `192.168.32.1` |
+| 20 | Travel Operations | `192.168.32.16/28` | `192.168.32.17` |
+| 30 | Finance | `192.168.32.32/28` | `192.168.32.33` |
+| 40 | IT Server | `192.168.32.48/28` | `192.168.32.49` |
+| 50 | Shared Printer | `192.168.32.64/28` | `192.168.32.65` |
+
+### Implementation and Testing Evidence
+
+The final phase evidence covers:
+
+- VLAN existence and trunk status on SW1.
+- Router subinterfaces, encapsulation and gateway addresses on R1.
+- Gateway connectivity tests for PC1–PC7.
+- Shared printer connectivity tests.
+- The `SERVER_ROOM_RESTRICT` access-control list and its interface assignment.
+- Restricted server access tests for PC1–PC6 and authorised access testing from PC7 in the IT department.
+
+### Final Project Files
+
+- **Packet Tracer simulation:** `Final Project Phase/packet-tracer/`
+- **Technical report:** `Final Project Phase/technical-report/`
+- **Screenshots and test evidence:** `Final Project Phase/screenshots/`
+
+The final simulation, report and evidence files must be present in their respective folders before the repository can be considered a complete final submission. Server restrictions should only be described as verified after checking the actual ACL rules and both authorised and unauthorised access tests.
